@@ -1,0 +1,45 @@
+<%- include('../../parts/head', {bot, user, path}) %>
+<title>Botunu Onayla | Discord Botları</title>
+  <style>
+    p{
+      color: white;
+    }
+  </style>
+<div class="container px-3 mt-2 pt-5">
+    <div class="container px-3 content is-widescreen pt-5">
+        <div class="bg-vote-vcodes pt-5">
+            <h3 class="has-text-white is-size-3" style="margin-bottom: 10px;"> </h3>
+            <p>&raquo&raquo Onaylamak için gerekli şartlar</p>
+            <p>
+                &raquo Botunuz sitemizde 5 günlük olmalı.
+                <br>&raquo 7/24 barındırılmalıdır. Küçük bakım yapmak veya hataları düzeltmek için yalnızca kısa duruş süreleri kabul edilir.
+                <br>&raquo Orjinal özellikte olmalı.
+                <br>&raquo Sadece kendi kodladığınız bot kabul edilir. Eğer birinden altyapı aldıysanız kabul edilemez.
+                <br>&raquo Botun özellikleri hakkında çok net belgeler sağlayan bir sitesi veya GitHub açık kaynağı olmalıdır..
+                <br>&raquo Botunuz en az 100 sunucu üstü katılmış olması gereklidir.
+            </p>
+            <br>
+            <p>&raquo&raquo Doğrulama Avantajları</p>
+            <p>
+                <br>&raquo&raquo Bot için
+                <br>&raquo Discord Sunucumuzda özel rol alırsınız. Önce discord sunucumuzda olmalısınız!
+                <br>&raquoÖzel bir rozet (                <span data-tooltip="<%=bot.guilds.cache.get(config.server.id).roles.cache.get(roles.botlist.certified_bot).name%>" data-tooltip-location="top"> 
+                    <i class="fad fa-badge-check has-text-primary" style="font-size: 20px;"></i>
+                    </span>) verilir.
+                
+                <br><br>&raquo&raquo Bot geliştiricileri için
+                
+                <br>&raquo Discord Sunucumuzda özel rol alırsınız. Önce discord sunucumuzda olmalısınız!
+                <br>&raquo Özel bir rozet (                <span data-tooltip="<%=bot.guilds.cache.get(config.server.id).roles.cache.get(roles.botlist.certified_developer).name%>" data-tooltip-location="top"> 
+                    <i class="fad fa-badge-check" style="color: <%=bot.guilds.cache.get(config.server.id).roles.cache.get(roles.botlist.certified_developer).hexColor%>;font-size: 20px;"></i>
+                    </span>) verilir.
+                </p>
+            <br>
+        </div>
+    </div>
+    <center>
+    <button onclick="location.href='/certification/apply'" class="btn btn-vcodes"><i class="fad fa-check"></i>&nbsp;Botunu Onaylat</button>
+    </center>
+</div>
+
+<%- include('../../parts/foot') %>
